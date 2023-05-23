@@ -1,9 +1,10 @@
 pipeline {
     agent any
+
     stages {
-        stage ("demo") {
-            steps{
-                echo " jenkinsfile demo"
+        stage('Git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/gauthamyadamari/jhc01web.git'
             }
         }
     }
